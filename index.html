@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT Immobilien</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+    header { background: #b91c1c; color: white; padding: 1rem; text-align: center; }
+    nav { text-align: right; margin: 1rem; }
+    nav button { margin-left: 0.5rem; padding: 0.4rem 0.8rem; cursor: pointer; background: #b91c1c; color: white; border: none; border-radius: 4px; }
+    .container { padding: 1rem 2rem; }
+    .property { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+    .property img { max-width: 100%; border-radius: 8px; margin-bottom: 1rem; }
+    footer { text-align: center; padding: 1rem; background: #eee; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PT Immobilien</h1>
+    <p>Modern Apartments for Rent in Hamburg</p>
+  </header>
+
+  <nav>
+    <button onclick="switchLanguage('en')">English</button>
+    <button onclick="switchLanguage('de')">Deutsch</button>
+  </nav>
+
+  <div class="container">
+    <div class="property">
+      <h2 data-en="Luxury Apartment in Hamburg Barmbek" data-de="Luxusapartment in Hamburg Barmbek">Luxury Apartment in Hamburg Barmbek</h2>
+      <img src="1.png" alt="Apartment photo">
+      <p data-en="39 m² one-room apartment on the 4th floor with a view over Hamburg. Fully furnished with high-end kitchen and SONOS sound system. All utilities included (heat, water, electricity, internet). Concierge, elevator, laundry room, and more." 
+         data-de="39 m² Ein-Zimmer-Apartment im 4. Stock mit Blick über Hamburg. Voll möbliert mit hochwertiger Küche und SONOS Soundsystem. Alle Nebenkosten inklusive (Heizung, Wasser, Strom, Internet). Concierge, Aufzug, Waschküche und mehr.">
+        39 m² one-room apartment on the 4th floor with a view over Hamburg. Fully furnished with high-end kitchen and SONOS sound system. All utilities included (heat, water, electricity, internet). Concierge, elevator, laundry room, and more.
+      </p>
+    </div>
+
+    <div class="contact">
+      <h3 data-en="Interested?" data-de="Interesse?">Interested?</h3>
+      <p data-en="Please contact me privately via Facebook Messenger for more information." 
+         data-de="Bitte kontaktieren Sie mich privat über Facebook Messenger für weitere Informationen.">
+         Please contact me privately via Facebook Messenger for more information.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 PT Immobilien</p>
+  </footer>
+
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerText = el.getAttribute(`data-${lang}`);
+      });
+    }
+  </script>
+</body>
+</html>
