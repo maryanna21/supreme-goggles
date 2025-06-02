@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,19 +7,25 @@
   <title>PT Immobilien</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
-    header { background: #b91c1c; color: white; padding: 1rem; text-align: center; }
+    header { background: #0d9488; color: white; padding: 1rem; text-align: center; }
     nav { text-align: right; margin: 1rem; }
-    nav button { margin-left: 0.5rem; padding: 0.4rem 0.8rem; cursor: pointer; background: #b91c1c; color: white; border: none; border-radius: 4px; }
+    nav button { margin-left: 0.5rem; padding: 0.4rem 0.8rem; cursor: pointer; background-color: #0d9488; color: white; border: none; border-radius: 5px; }
     .container { padding: 1rem 2rem; }
     .property { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 2rem; }
     .property img { max-width: 100%; border-radius: 8px; margin-bottom: 1rem; }
+    .contact, .booking-form { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 2rem; }
     footer { text-align: center; padding: 1rem; background: #eee; margin-top: 2rem; }
+    input, textarea { width: 100%; padding: 0.5rem; margin-top: 0.5rem; border-radius: 5px; border: 1px solid #ccc; }
+    button.submit-btn { background-color: #0d9488; color: white; border: none; padding: 0.7rem 1.2rem; margin-top: 1rem; border-radius: 5px; cursor: pointer; }
+    @media (max-width: 600px) {
+      .container { padding: 1rem; }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>PT Immobilien</h1>
-    <p>Modern Apartments for Rent in Hamburg</p>
+    <p data-en="Modern Apartments for Rent in Hamburg" data-de="Moderne Wohnungen zur Miete in Hamburg">Modern Apartments for Rent in Hamburg</p>
   </header>
 
   <nav>
@@ -36,12 +43,40 @@
       </p>
     </div>
 
+    <div class="property">
+      <h2 data-en="Modern 2-Room Apartment in Bergedorf, Hamburg" data-de="Moderne 2-Zimmer-Wohnung in Bergedorf, Hamburg">Modern 2-Room Apartment in Bergedorf, Hamburg</h2>
+      <img src="photo_2025-06-02_15-26-28.jpg" alt="Apartment photo">
+      <p data-en="52 m² apartment on the 2nd floor. New kitchen and bathroom, balcony, and included utilities. Fully furnished. Underground parking and storage."
+         data-de="52 m² Wohnung im 2. Stock. Neue Küche und Bad, Balkon, alle Nebenkosten inklusive. Voll möbliert. Tiefgarage und Abstellraum.">
+        52 m² apartment on the 2nd floor. New kitchen and bathroom, balcony, and included utilities. Fully furnished. Underground parking and storage.
+      </p>
+    </div>
+
     <div class="contact">
       <h3 data-en="Interested?" data-de="Interesse?">Interested?</h3>
       <p data-en="Please contact me privately via Facebook Messenger for more information." 
          data-de="Bitte kontaktieren Sie mich privat über Facebook Messenger für weitere Informationen.">
          Please contact me privately via Facebook Messenger for more information.
       </p>
+    </div>
+
+    <div class="booking-form">
+      <h3 data-en="Booking Inquiry" data-de="Buchungsanfrage">Booking Inquiry</h3>
+      <form>
+        <label data-en="Name" data-de="Name">Name</label>
+        <input type="text" placeholder="Marya" required>
+
+        <label data-en="Email" data-de="E-Mail">Email</label>
+        <input type="email" placeholder="marianna21@nerd4life.de" required>
+
+        <label data-en="Phone" data-de="Telefon">Phone</label>
+        <input type="text" placeholder="017686018496" required>
+
+        <label data-en="Message" data-de="Nachricht">Message</label>
+        <textarea placeholder="For more info please contact me in privat on messenger" required></textarea>
+
+        <button type="submit" class="submit-btn" data-en="Submit" data-de="Senden">Submit</button>
+      </form>
     </div>
   </div>
 
